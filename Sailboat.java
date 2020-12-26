@@ -5,7 +5,7 @@ public class Sailboat extends Vehicle {
     private int length;
 
     //constructos
-    public Sailboat(String powerSource, int wheels) {
+    public Sailboat() {
         super("wind", 0);
         setLength();
     }
@@ -33,4 +33,13 @@ public class Sailboat extends Vehicle {
         return length;
     }
     
+    //methods
+    @Override
+    public String toString()
+    {
+        return("The " + getLength() +
+               " foot sailboat is powered by " +
+               getPowerSource() + "; it has " + getWheels() +
+               " wheels and costs $" + getPrice());
+    }
 }
